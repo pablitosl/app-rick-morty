@@ -21,11 +21,11 @@ const Card = () => {
         {characters.map((character) => (
             <div className='col-12 col-sm-6 col-lg-4 col-xl-3'>
                 <div key={character.id} className='card m-4'>
-                    <img src={character.image} className='card-img-top p-2' alt={character.name} />
+                    <img src={character.image} className='card-img-top p-2 rounded' alt={character.name} />
                     <div className='card-body text-center'>
-                        <h5 className='card-title'>{character.name}</h5>
-                        <p className='card-text'>{character.species}</p>
-                        <p className='card-text'>{character.gender}</p>
+                        <h5 className='card-title fs-2'>{character.name}<span className='status align-middle'>{character.status=='Alive'? '🟢' : '🔴'}</span></h5>
+                        <p className='card-text fs-5'>{character.gender}</p>
+                        <p className='card-text fs-5'>{character.species}</p>
                         <a href='#' className='btn btn-primary'>Go somewhere</a>
                     </div>
                 </div>

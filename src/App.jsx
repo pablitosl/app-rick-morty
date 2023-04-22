@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import './App.css';
 import Card from './components/Card';
+import Search from './components/Search';
+import Pagination from './components/Pagination';
 
 function App() {
 
@@ -10,6 +12,10 @@ function App() {
     <div className="app bg-dark ">
       <div className='w-100 d-flex justify-content-center '>
         <img src={imgTitle} alt="title" className='title img-fluid' />
+      </div>
+      <div className='navbar'>
+        <Search/>
+        <Pagination/>
       </div>
       <div className='container'>
         <Card />

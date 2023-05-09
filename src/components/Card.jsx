@@ -26,7 +26,7 @@ const Card = () => {
                         <h5 className='card-title fs-2'>{character.name}<span className='status align-middle'>{character.status=='Alive'? '🟢' : '🔴'}</span></h5>
                         <p className='card-text fs-5'>{character.gender}</p>
                         <p className='card-text fs-5'>{character.species}</p>
-                        <a href='#' className='btn btn-primary'>Go somewhere</a>
+                        <a href='#' className='btn btn-primary'>View detail</a>
                     </div>
                 </div>
             </div>

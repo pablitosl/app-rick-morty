@@ -1,7 +1,11 @@
+import { Route, Routes } from 'react-router-dom';
+/* Estilos */
 import imgTitle from '../src/assets/title.png';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import './App.css';
+
+/* Components */
 import Card from './components/Card';
 import Search from './components/Search';
 import Pagination from './components/Pagination';

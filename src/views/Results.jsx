@@ -36,10 +36,10 @@ return (
                         <div  className='card m-4'>
                             <img src={result.image} className='card-img-top p-2 rounded' alt={result.name} />
                             <div className='card-body text-center'>
-                                <h5 className='card-title fs-2'>{result.name}<span className='status align-middle'>{result.status=='Alive'? '🟢' : '🔴'}</span></h5>
-                                <p className='card-text fs-5'>{result.gender}</p>
-                                <p className='card-text fs-5'>{result.species}</p>
-                                
+                                <h5 className='card-title fs-2'>{result.name}</h5>
+                                <span className='status align-middle fs-6'>{result.status=='Alive'? '🟢 Alive' : '🔴 Death / Unknown'}</span>
+                                <p className='card-text fs-4 m-0'>Genero: {result.gender}</p>
+                                <p className='card-text fs-4 m-0'>Especie: {result.species}</p>
                             </div>
                         </div>
                     </div>

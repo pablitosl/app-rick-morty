@@ -25,9 +25,10 @@ const Card = () => {
                     <div  className='card m-4'>
                         <img src={character.image} className='card-img-top p-2 rounded' alt={character.name} />
                         <div className='card-body text-center'>
-                            <h5 className='card-title fs-2'>{character.name}<span className='status align-middle'>{character.status=='Alive'? '🟢' : '🔴'}</span></h5>
-                            <p className='card-text fs-5'>{character.gender}</p>
-                            <p className='card-text fs-5'>{character.species}</p>
+                            <h5 className='card-title fs-2'>{character.name}</h5>
+                            <span className='status align-middle fs-6'>{character.status=='Alive'? '🟢 Alive' : '🔴 Death / Unknown'}</span>
+                            <p className='card-text fs-4 m-0'>Genero: {character.gender}</p>
+                            <p className='card-text fs-4 '>Especie: {character.species}</p>
                             <Link to={`/detail?characterID=${character.id}`}  className='btn btn-primary'>View detail</Link>
                         </div>
                     </div>

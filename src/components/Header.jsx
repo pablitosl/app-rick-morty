@@ -3,13 +3,15 @@ import img from '/src/assets/title.png'
 
 import Search from './Search';
 import Pagination from './Pagination';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <>
         <div className="app bg-dark">
             <header className='w-100 d-flex justify-content-center '>
-                <img src={img} alt="title" className='title img-fluid' />
+                <Link to={('/')}><img src={img} alt="title" className='title img-fluid' /></Link>
+                
             </header>
             <section className='navbar'>
                 <Search/>

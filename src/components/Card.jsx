@@ -21,14 +21,14 @@ const Card = () => {
     return (
         <div className='row'>
             {characters.map((character) => (
-                <div className='col-12 col-sm-6 col-lg-4 col-xl-3'>
-                    <div key={character.id} className='card m-4'>
+                <div key={character.id} className='col-12 col-sm-6 col-lg-4 col-xl-3'>
+                    <div  className='card m-4'>
                         <img src={character.image} className='card-img-top p-2 rounded' alt={character.name} />
                         <div className='card-body text-center'>
                             <h5 className='card-title fs-2'>{character.name}<span className='status align-middle'>{character.status=='Alive'? '🟢' : '🔴'}</span></h5>
                             <p className='card-text fs-5'>{character.gender}</p>
                             <p className='card-text fs-5'>{character.species}</p>
-                            <Link to='/detail' className='btn btn-primary'>View detail</Link>
+                            <Link to={`/detail?characterID=${character.id}`}  className='btn btn-primary'>View detail</Link>
                         </div>
                     </div>
                 </div>

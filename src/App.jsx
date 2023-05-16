@@ -9,6 +9,7 @@ import './App.css';
 import Home from './views/Home';
 import Detail from './views/Detail';
 import Header from './components/Header';
+import Results from './views/Results';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={ <Home /> } />
             <Route path='/detail' element={ <Detail /> } />
+            <Route path='/results' element={ <Results /> } />
           </Routes>
         </>
     )}

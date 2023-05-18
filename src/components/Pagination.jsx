@@ -1,12 +1,20 @@
-import React from 'react'
+/*import React from 'react'
+import loadCharacters from '../services/fetch'
 
 const Pagination = () => {
 
     const handlePrev = () => { 
-        console.log('Prev')
+        const {results} = loadCharacters()
+        console.log(results)
     }
     const handleNext = () => {
-        console.log('Next')
+        loadCharacters('https://rickandmortyapi.com/api/character')
+        .then(({info}) => {
+            loadCharacters(info.next)
+                .then(({results}) => {
+                console.log(results)
+            })
+    })
     }
     
     return (
@@ -25,4 +33,4 @@ const Pagination = () => {
   )
 }
 
-export default Pagination
+export default Pagination */

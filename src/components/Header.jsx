@@ -2,7 +2,6 @@ import React from 'react'
 import img from '/src/assets/title.png'
 
 import Search from './Search';
-import Pagination from './Pagination';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -15,7 +14,6 @@ const Header = () => {
             </header>
             <section className='navbar'>
                 <Search/>
-                <Pagination/>
             </section>
         </div>
         </>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import loadCharacters from '/src/services/fetch.js'
 
 const Detail = () => {
 
@@ -12,9 +13,10 @@ const Detail = () => {
   useEffect(() => {
     const APIURL = `https://rickandmortyapi.com/api/character/${characterID}`
 
-    fetch(APIURL)
-      .then(res => res.json())
-      .then(data => setCharacterDetail(data))
+    loadCharacters(APIURL)
+      .then((character) => {
+        setCharacterDetail(character.data)
+      })
   }, [characterID])
   
   return (

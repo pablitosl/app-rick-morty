@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
+import loadCharacters from '../services/fetch';
 
 const Results = () => {
 
@@ -14,17 +15,14 @@ const Results = () => {
     useEffect(() => {
     const API_URL = `https://rickandmortyapi.com/api/character/?name=${keyword}`
 
-    fetch(API_URL)
-            .then(response => response.json())
-            .then(data => data.results)
-            .then(array => {
-                if(!array){
-                    Swal.fire('No hay resultados de tu búsqueda')
-                    navigate('/')
-                }
-                setResults(array)
-            })
-    }, [keyword])
+    loadCharacters(API_URL)
+        .then(({results}) => {
+            if(!results){
+                Swal.fire('No hay resultados de tu búsqueda')
+                navigate('/')
+            }
+            setResults(results)
+    }), [keyword]})
 
 return (
     <div className='container'>

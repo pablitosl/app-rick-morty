@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import loadCharacters from '/src/services/fetch.js'
 
 
 const Card = () => {
     const [characters, setCharacters] = useState([])
+    const [info, setInfo] = useState()
 
     useEffect(() => {
-        const loadCharacters = async () => {
-            const apiURL = 'https://rickandmortyapi.com/api/character'
-
-            const res = await fetch(apiURL)
-            const data = await res.json()
-            const {info, results} = data;
-            
+        const apiURL = 'https://rickandmortyapi.com/api/character'
+        
+        loadCharacters(apiURL)
+            .then(({info, results}) => {
+        
+            setInfo(info)
             setCharacters(results)
-        }
-        loadCharacters()
+        })
     }, [])
     
     return (
